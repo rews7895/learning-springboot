@@ -37,7 +37,11 @@
 - spring-boot-actuator: 모니터링을 위해 애플리케이션에서 제공하는 다양한 정보를 제공하기 쉽게 하는 의존성 모음
 - spring-boot-stater-data-jpa: ORM을 사용하기 위한 인터페이스의 모음인 JPA를 더 쉽게 사용하기 위한 의존성 모음
 
-### 어노테이션 정리
+### 어노테이션
+- 자바 소스 코드에 추가하는 표식으로, 보통 @ 기호를 앞에 붙여서 사용하며, JDK 1.5 버전부터 사용할 수 있다.
+- 어노테이션은 다양한 목적으로 사용하지만, 메타 데이터(데이터에 대한 설명을 담고 있는 데이터)의 비중이 가장 크다.
+
+### 자주 볼 수 있는 어노테이션 정리
 - @SpringBootApplication: 스프링 부트 사용에 필요한 기본 설정을 해준다.
 - @SpringBootConfiguration: 스프링 부트 관련 설정을 나타내는 어노테이션이며 스프링의 @Configuration을 상속해서 만듬.
 - @ComponentScan: 사용자가 등록한 빈을 읽고 등록하는 어노테이션
@@ -46,3 +50,5 @@
 - @Repository: ORM 매핑
 - @Controller, @RestController: 라우터
 - @Service: 비즈니스 로직
+- @SpringBootConfig: 스프링 부트 관련 설정
+- @Component: 해당 어노테이션은 빈으로 등록되며, @Controller, @RestController, @Configuration, @Repository, @Service 모두 @Component 어노테이션을 가지고 있으며, 상황에 따라 알맞은 어노테이션을 사용해야 한다.
