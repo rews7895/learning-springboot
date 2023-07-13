@@ -23,7 +23,6 @@ repositories {
 // 프로젝트를 개발하며 필요한 기능의 의존성
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	// 스프링 데이터 JPA
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'jakarta.persistence:jakarta.persistence-api'
@@ -32,6 +31,7 @@ dependencies {
 	// 롬복
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
