@@ -178,3 +178,7 @@
 - unique: 컬럼의 유일한 값(unique) 여부. 설정하지 않으면 false(non unique)
 - columnDefinition: 컬럼 정보 설정. default 값을 줄 수 있다.
 
+### REST (Representational State Transfer)
+- URL 설계 방식
+- 자원을 이름으로 구분해 자원의 상태를 주고받는 API 방식
+
