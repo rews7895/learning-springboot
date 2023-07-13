@@ -52,6 +52,14 @@
 - @Service: 비즈니스 로직
 - @SpringBootConfig: 스프링 부트 관련 설정
 - @Component: 해당 어노테이션은 빈으로 등록되며, @Controller, @RestController, @Configuration, @Repository, @Service 모두 @Component 어노테이션을 가지고 있으며, 상황에 따라 알맞은 어노테이션을 사용해야 한다.
+- @Entity: 엔티티로 지정
+- @Id: id 필드를 기본키로 지정
+- @GeneratedValue(starategy = GenerationType.IDENTITY): 기본키를 자동으로 1씩 증가
+- @Builder: 빌터 패턴으로 객체 생성
+- @AllArgsConstructor: 모든 필드 값을 파라미터로 받는 생성자 추가
+- @NoArgsConstructor: 기본 생성자를 추가해준다
+- @NoArgsConstructor(access = AccessLevel.PROTECTED): 접근 제어자가 protected인 기본 생성자를 만들어준다.
+- @Getter: 모든 필드에 접근자 메서드를 만들어준다.
 
 ### 스프링 부트 계층구조
 - 프레젠테이션 계층: HTTP 요청을 받고 이 요청을 비즈니스 계층으로 전송하는 역할을 하며, 컨트롤러가 프레젠테이션 계층의 역할을 한다.
@@ -67,6 +75,11 @@
 - main/resources/static: JS, CSS, 이미지와 같은 정적 파일을 담는 공간이다.
 - main/resources/application.yml: 스프링 부트의 데이터베이스의 설정 정보, 로깅 설정 정보 등이 들어갈 수도 있고, 직접 설정을 정의할 때 사용하기도 한다. 또한 스프링 부트 서버가 실행되면 자동으로 로딩되는 파일이다.
 - main/resources/data.sql: 미리 생성할 데이터 관련 쿼리
+- main/java/[DOMAIN]/controller/*: 컨트롤러를 담는 공간
+- main/java/[DOMAIN]/domain/*: 도메인을 담는 공간
+- main/java/[DOMAIN]/dto/*: 계층끼리 데이터를 교환하기 위해 사용하는 객체를 담을 공간
+- main/java/[DOMAIN]/repository/*: 리포지토리 인터페이스를 담을 공간
+- main/java/[DOMAIN]/service/*: 서비스 로직을 담을 공간
 
 ### 디스패처 서블릿
 - URL을 분석하고, 이 요청을 처리할 수 있는 컨트롤러를 찾아준다.
@@ -194,4 +207,12 @@
 - REST API를 사용하는 방법
   1) URL에는 동사를 쓰지 말고, 자원을 표시해야 한다.
   2) 동사는 HTTP 메서드로
+
+### 응답코드
+- 200 OK: 요청이 성공적으로 수행되었음
+- 201 Created: 요청이 성공적으로 수행되었고, 새로운 리소스가 생성되었음
+- 400 Bad Request: 요청 값이 잘못되어 요청에 실패했음
+- 403 Forbidden: 권한이 없어 요청에 실패했음
+- 404 Not Found: 요청 값으로 찾은 리소스가 없어 요청에 실패했음
+- 500 Internal Server Error: 서버 상에 문제가 있어 요청에 실패했음
 
