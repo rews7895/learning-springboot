@@ -166,3 +166,15 @@
 - 비영속 (transient) 상태: 영속성 컨텍스트와 전혀 관계가 없는 상태
 - 삭제된 (removed) 상태
 
+### @GeneratedValue 의 자동키 설정 방식
+- AUTO: 선택한 데이터베이스 방언(dialect)에 따라 방식을 자동으로 선택(기본값)
+- IDENTITY: 기본키 생성을 데이터베이스에 위임(=AUTO_INCREMENT)
+- SEQUENCE: 데이터베이스 시퀀스를 사용해서 기본키를 할당하는 방법. 오라클에서 주로 사용 
+- TABLE: 키 생성 테이블 사용
+
+### @Column 어노테이션의 속성
+- name: 필드와 매핑할 컬럼 이름. 설정하지 않으면 필드 이름으로 지정해준다.
+- nullable: 컬럼의 null 허용 여부. 설정하지 않으면 true(nullable)
+- unique: 컬럼의 유일한 값(unique) 여부. 설정하지 않으면 false(non unique)
+- columnDefinition: 컬럼 정보 설정. default 값을 줄 수 있다.
+
