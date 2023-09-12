@@ -61,7 +61,8 @@
 - @NoArgsConstructor(access = AccessLevel.PROTECTED): 접근 제어자가 protected인 기본 생성자를 만들어준다.
 - @Getter: 모든 필드에 접근자 메서드를 만들어준다.
 - @PathVariable: URL에서 값을 가져오는 어노테이션
-- @Transactional: 매칭한 매서드를 하나의 트랜잭션으로 묶는 역할을 한다.+
+- @Transactional: 매칭한 매서드를 하나의 트랜잭션으로 묶는 역할을 한다.
+- @EnableJpaAuditing: JPA 엔티티 자동 업데이트
 
 ### 스프링 부트 계층구조
 - 프레젠테이션 계층: HTTP 요청을 받고 이 요청을 비즈니스 계층으로 전송하는 역할을 하며, 컨트롤러가 프레젠테이션 계층의 역할을 한다.
