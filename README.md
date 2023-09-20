@@ -63,6 +63,7 @@
 - @PathVariable: URL에서 값을 가져오는 어노테이션
 - @Transactional: 매칭한 매서드를 하나의 트랜잭션으로 묶는 역할을 한다.
 - @EnableJpaAuditing: JPA 엔티티 자동 업데이트
+- @ConfigurationProperties: 자바 클래스에 프로퍼티값을 가져와서 사용하는 어노테이션
 
 ### 스프링 부트 계층구조
 - 프레젠테이션 계층: HTTP 요청을 받고 이 요청을 비즈니스 계층으로 전송하는 역할을 하며, 컨트롤러가 프레젠테이션 계층의 역할을 한다.
