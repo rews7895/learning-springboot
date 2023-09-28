@@ -34,9 +34,13 @@ public class Article {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @Column(name = "author", nullable = false)
+    private String author;
+
     // @Builder: 롬복에서 지원하는 어노테이션으로 빌터 패턴 방식으로 객체를 편리하게 생성할 수 있게 해준다.
     @Builder
-    public Article(String title, String content) {
+    public Article(String author, String title, String content) {
+        this.author = author;
         this.title = title;
         this.content = content;
     }
